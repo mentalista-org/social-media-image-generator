@@ -1,0 +1,205 @@
+@import "font.css";
+
+/*––––––– GLOBAL –––––––*/
+
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family:"Ibm Plex Sans";
+	font-size:17px;
+}
+
+html{
+	background-color: #333;
+}
+
+/*––––––– FRONT –––––––*/
+
+h1{
+	font-size:50px;
+	color:#333;
+}
+
+#edittoggle{
+	position: fixed;
+	top:30px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration: underline;
+	color:#FFF;
+	cursor: pointer;
+}
+
+#canvasContainer{
+	position: absolute;
+	top:50%;left:50%;
+	transform: translate(-50%,-50%);
+
+	/* TODO adapt with the screen size (media queries) */
+	height: 300px;
+	width: 300px;
+}
+
+canvas{
+	max-width:100%;
+	max-height:100%;
+}
+
+#downloadButton{
+	position: fixed;
+	bottom:30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #FFF;
+	width:50px;
+	height: 50px;
+	border-radius: 50%;
+	
+}
+.download.icon {
+	transform: scale(1.5);
+  color: #000;
+  position: absolute;
+  margin-left: 18px;
+  margin-top: 27px;
+  width: 13px;
+  height: 4px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+  border-top: none;
+}
+
+.download.icon:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -9px;
+  width: 1px;
+  height: 10px;
+  background-color: currentColor;
+}
+
+.download.icon:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: -4px;
+  width: 4px;
+  height: 4px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+/*––––––– EDITOR –––––––*/
+
+.hidden{
+	display: none;
+}
+
+#editor{
+	/*display: block;*/
+	z-index: 999;
+	position: absolute;
+	top:0;
+	background-color: rgba(220,220,220,1);
+	width: 100%;
+	height: 100vh;
+	overflow: scroll;
+}
+
+#closeEditor, #bottomCloseEditor{
+	/*position: fixed;*/
+	margin-top:30px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	text-decoration: underline;
+	text-align: center;
+	cursor: pointer;
+}
+
+#bottomCloseEditor{
+	margin-bottom:30px;
+}
+
+button{
+	-webkit-outline: none;
+	   -moz-outline: none;
+			outline: none;
+	padding:7px 25px;
+	background-color:#aaa;
+	border-radius:5px;
+	border:none;
+	color:#000000;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color:#ccc;
+}
+
+button:active{
+	background-color:#777;
+}
+
+#params{
+	position: relative;
+	padding:15px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 500px;
+}
+#params li{
+	margin-bottom: 5px;
+}
+#params li label{
+	font-size: 12px;
+}
+#params li select,li input{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+	-webkit-outline: none;
+	   -moz-outline: none;
+			outline: none;
+
+	display:block;
+	border : 1px solid #aaa;
+	background-color: #FFF;
+	border-radius: 5px;
+
+	padding:10px;
+	width:100%;
+	cursor: pointer;
+}
+
+/*input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}*/
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+#backgroundColor{
+	padding:4px 5px 4px 4px;
+	height: 45px;
+}
+
+#upload{
+	margin-top: 20px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+#file{display: none;}

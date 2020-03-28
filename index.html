@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta id="myViewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<title>Generate Image Post</title>
+	<script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!--h1>Generate Image Post</h1-->
+	<p id="edittoggle">Edit image</p>
+	<div id="editor" class="hidden">
+		<p id="closeEditor">Close</p>
+		<ul id="params">
+			<!-- GLOBAL -->
+
+			<!--li>
+				//Add a graphic design template selection
+				<label>Template</label>
+				<select id="template">
+					<option value="template 1" selected>Template 1</option> 
+					<option value="template 2">Template 2</option>
+				</select>
+			</li-->
+
+			<li>
+				<label>Background Color</label>
+				<input id="backgroundColor" type="color" value="#eeeeee">
+			</li>
+			<!-- HEADER -->
+			<li>
+				<label>Installation</label>
+				<select id="installation">
+					<option value="mentalista•foot" selected>Mentalista Foot</option> 
+					<option value="mentalista•guinguette">Mentalista Guinguette</option>
+					<option value="duel•cerveau">Duel Cerveau</option>
+					<option value="brain•sound">Brainsound</option>
+					<option value="projet•levitation">Projet Lévitation</option>
+					<option value="cosa•mentale">Cosa Mentale</option>
+				</select>
+			</li>
+
+			<!-- BODY -->
+			<li>
+				<label>Event</label>
+				<input id="event" type="text" value="Paris Games week">
+			</li>
+			<li>
+				<label>Date</label>
+				<input id="date" type="text" value="22 Oct.–2 Nov. 2020">
+			</li>
+			
+			<!-- FOOTER -->
+			<li>
+				<label>Mention</label>
+				<input id="mention" type="text" value="@mentalistaFR">
+			</li>
+			<li>
+				<label>Hashtag</label>
+				<input id="hashtag" type="text" value="#mentalistafoot">
+			</li>
+			
+			<!-- IMAGE -->
+			<li>
+				<label>Image</label>
+				<input id="image" type="text" readonly value="viva-technology_2019-05-16_medium_0.jpg">
+				<input type="file" id="file" name="file" accept="image/*" />
+				<button id="upload">Load Image</button>
+			</li>
+			
+			<!--button id="download">Download</button-->
+		</ul>
+		<p id="bottomCloseEditor">Close</p>
+	</div>
+	<div id="canvasContainer">
+		<canvas id="generatedImage"></canvas>
+	</div>
+	<div id="downloadButton">
+		<div class="download icon"></div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>
